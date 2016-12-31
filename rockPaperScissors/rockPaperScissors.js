@@ -16,4 +16,18 @@
 * Example:
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
-*/
+*/ function rps() {
+
+    var options = ['rock', 'paper', 'scissors'];
+    var results = [];
+    var re=[];
+
+    for (var i = 0; i < options.length; i++) {
+        for (var j = 0; j < options.length; j++) {
+            for (var k = 0; k < options.length; k++) {
+                re.push(results(options[i], options[j], options[k]));
+            }
+        }
+    }
+    return results;
+}
