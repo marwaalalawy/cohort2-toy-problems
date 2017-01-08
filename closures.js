@@ -15,12 +15,9 @@ cube(3);//should return 27
 */
 
 function exponent(exp){
-	return{
-		ex:function (value){
-		 Math.pow(value,exp)	
-		}
-	}
-	return ex;
+	return function (value){
+		return Math.pow(value,exp)}	
+		
 }
 
 /*
@@ -44,19 +41,20 @@ myGame.myLevel(); //should return "You need to improve your game"
 */
 
 function pingPongTracker(){
+	var total = 0 ; 
 	return{
 	timeSpentPlaying:function(){
-		var total=setTimeout(function() {}, 10);
-		return total;
+		//var total=setTimeout(function() {}, 10);
+		return time;
 	},
 	playOneGame:function(){
 		 total=total+15;
 		 return "Game played";
 	},
 	myLevel:function(){
-		if(total/60 < 30){
+		if(total< 30){
 			return "I need to improve my game";
-		}else if(total/60 >30 && total/60 <100){
+		}else if(total>=30 && total<100){
 			return "You need to improve your game";	
 		}else{
 			return "Wow, I have wasted a lot of time";
