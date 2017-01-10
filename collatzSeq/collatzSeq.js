@@ -16,16 +16,30 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 
 
 var longestCollatzSeq = function(){
-	var num=1000000;
-	var arr=[];
-	while(num>1){
-		if(num%2===0){
-			num=num/2;
-			arr.push(num)
-		}else{
-			num=3*num+1
-			arr.push( num)
+	var max = 0 ;
+	var result = 0
+	for (var i = 1000000; i >1 ; i--) { // O(n)
+		var num = million(i);  // O(n) 
+		if(num.length>max){
+			max = num.length ;
+			result =i
 		}
 	}
+	return result 
+	
+} 
+// time complexity for longestCollatzSeq in worst case is O(n^2)
+
+function million(n){
+	var arr =[n] ;
+	while(n>1){
+		if(n%2=== 0){
+			n = n/2 ;
+		}else {
+			n=(3*n+1)
+		}
+		arr.push(n)
+	}
 	return arr;
+	
 }
