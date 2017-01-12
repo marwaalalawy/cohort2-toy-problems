@@ -26,6 +26,9 @@ function Jar() {
 }
 
 Jar.prototype.add=function(amount,kind){
+	if(this.juice[kind]){
+		this.juice[kind]=this.juice[kind]+ amount
+	}
 	this.juice[kind]=amount;
 	this.total+=amount;
 }
@@ -35,10 +38,11 @@ Jar.prototype.getTotalAmount=function(){
 }
 
 Jar.prototype.getConcentration=function(kind){
-	if(Object.keys(this.juice).length === 0){
-		return 0
+	if(this.juice[kind]){
+		return this.juice[kind] / this.total 
 	}
-	// i have to calculate the percentage of every kind in the juice;
+
+	return 0 ;
 }
 
 /*
