@@ -16,7 +16,7 @@
 
    // remove an item from the top of the stack
    this.pop = function(){
-    this.stack.shift();
+    return this.stack.shift();
    };
 
    // return the number of items in the stack
