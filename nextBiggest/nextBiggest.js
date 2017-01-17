@@ -72,3 +72,24 @@ nextBigger(531)==-1
 function nextBigger(num){
 
 }
+
+// function nextBigger(num){
+// 	var x;
+// 	var arr=(num+"").split("");
+// 	if (arr.length%2!==0){
+// 		x=arr[0];
+// 		arr.shift();
+// 	}
+// 	for (var i = 0; i < arr.length; i++) {
+// 		if (arr[i]<arr[i+1]){
+// 			var temp=arr[i]
+// 			arr[i]=arr[i+1]
+// 			arr[i+1]=temp;
+// 		}
+// 		i++;
+// 	}
+// 	if ((x+arr.join(""))*1===num){
+// 		return -1;
+// 	}
+// 	return (x+arr.join(""))*1
+// }
