@@ -32,11 +32,12 @@ LinkedList.prototype.makeNode=function(value){
 LinkedList.prototype.addToTail = function(value){
 	var x=this.makeNode(value)
 	if(this.tail !== null){
-		this.tail=this.tail.next=x
+		this.tail.next=x
 		this.tail=x
-	}else if(this.tail === null)
-	this.head=x
-	this.tail=this.head;
+	}else if(this.tail === null){
+		this.head=x
+		this.tail=this.head;	
+	}
 }
 
 LinkedList.prototype.removeHead = function(){
