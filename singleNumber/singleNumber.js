@@ -58,12 +58,12 @@ countAllNumbers(2); //should return 91 because there are 91 numbers that have un
 */
 
 function countAllNumbers(n){
-	var count=0;
+	var arr=[0];
 	var range=Math.pow(10,n)
 	for(var i=0;i<=range;i++){
-		if(i%10 !== i){
-			count=count+1;
+		if(i%10 !== (i-i%10)/10){
+			arr.push(i)
 		}
 	}
-	return count;
+	return arr.length;
 };
