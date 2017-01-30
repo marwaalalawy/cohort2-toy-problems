@@ -39,7 +39,8 @@ var add2 = function(number){ return number + 2; }
 var multiplyBy3 = function(number){ return number * 3; }
 
 var pipe = function(func1,func2){
-  
+  var args = Array.from(arguments);
+  return compose.apply(null, args.reverse());
 };
 
 var addAndMultiplyTwice = pipe(add2, multiplyBy3, multiplyBy3);
