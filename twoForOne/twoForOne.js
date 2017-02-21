@@ -60,7 +60,7 @@ function pyramid(cans){
  	for (var i = 1; i <= cans; i++) {
  	  if(Math.pow(i,2) <= cans){
  		counter++
- 		cans = cans - Math.pow(i,2)
+ 		cans = Math.pow(i,2)
  	  }
  	}
  	return counter;
